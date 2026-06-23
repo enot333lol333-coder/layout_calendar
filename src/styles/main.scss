@@ -3,8 +3,11 @@ $border: 1px;
 $gap: 1px;
 $padding: 10px;
 $columns: 7;
+$cell-width: $day-size + 2 * $border;
+$calendar-width: $columns * $cell-width + ($columns - 1) * $gap + 2 * $padding;
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -20,7 +23,7 @@ body {
   flex-wrap: wrap;
   gap: $gap;
   padding: $padding;
-  width: $columns * $day-size + ($columns - 1) * $gap + 2 * $padding + $columns * 2 * $border;
+  width: $calendar-width;
 }
 
 .calendar__day {
@@ -36,11 +39,11 @@ body {
   font-size: 30px;
   transition: all 0.5s;
 
-&:hover {
-  background-color: #FFBFCB;
-  transform: translateY(-20px);
-  cursor: pointer;
-}
+  &:hover {
+    background-color: #ffbfcb;
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
 }
 
 @for $i from 1 through 31 {
@@ -49,7 +52,15 @@ body {
   }
 }
 
-$start-days: (mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6, sun: 7);
+$start-days: (
+  mon: 1,
+  tue: 2,
+  wed: 3,
+  thu: 4,
+  fri: 5,
+  sat: 6,
+  sun: 7,
+);
 
 @each $day, $col in $start-days {
   .calendar--start-day_#{$day} {
