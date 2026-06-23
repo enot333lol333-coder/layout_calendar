@@ -4,11 +4,15 @@ $gap: 1px;
 $padding: 10px;
 $columns: 7;
 
+html, body {
+  height: 100%;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .calendar {
