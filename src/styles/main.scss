@@ -52,18 +52,10 @@ body {
   }
 }
 
-$start-days: (
-  mon: 1,
-  tue: 2,
-  wed: 3,
-  thu: 4,
-  fri: 5,
-  sat: 6,
-  sun: 7,
-);
+$start-days: (mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6, sun: 7);
 
 @each $day, $col in $start-days {
-  .calendar--start-day_#{$day} {
+  .calendar--start-day-#{$day} {
     .calendar__day:nth-child(1) {
       margin-left: ($col - 1) * ($day-size + $gap + 2 * $border);
     }
@@ -71,7 +63,7 @@ $start-days: (
 }
 
 @for $len from 28 through 31 {
-  .calendar--month-length_#{$len} {
+  .calendar--month-length-#{$len} {
     .calendar__day:nth-child(n + #{$len + 1}) {
       display: none;
     }
