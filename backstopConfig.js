@@ -20,9 +20,6 @@ const config = {
   fileNameTemplate: '{scenarioLabel}',
   onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
-  engineOptions: {
-    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-  },
   viewports: [
     {
       name: 'tablet_h',
