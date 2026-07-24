@@ -3,7 +3,7 @@ $border: 1px;
 $gap: 1px;
 $padding: 10px;
 $columns: 7;
-$cell-width: $day-size; // border уже включён в width из-за box-sizing: border-box
+$cell-width: $day-size;
 $calendar-width: $columns * $cell-width + ($columns - 1) * $gap + 2 * $padding;
 
 html,
