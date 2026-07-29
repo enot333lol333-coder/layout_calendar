@@ -19,7 +19,7 @@
     align-items: center;
     font-family: Arial, sans-serif;
     font-size: 30px;
-    transition: background-color $transition-duration, transform $transition-duration;
+    transition: all, 0.3s;
 
     &:hover {
       background-color: #ffbfcb;
